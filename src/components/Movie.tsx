@@ -18,11 +18,10 @@ function Movie({ name, grade, onRemove }: Movieprop) {
       <div>
         <span className="movie-title">{name}</span>
         <span className="movie-stars">{stars}</span>
-
-        <button className="remove-button" onClick={onRemove}>
-          ❎
-        </button>
       </div>
+      <button className="remove-button" onClick={onRemove}>
+        ❎
+      </button>
     </li>
   );
 }

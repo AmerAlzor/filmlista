@@ -35,3 +35,21 @@
   display: flex;
   gap: 16px;
 }
+.movie-form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.movie-form input,
+.movie-form select,
+.movie-form button {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.movie-form button {
+  cursor: pointer;
+}
