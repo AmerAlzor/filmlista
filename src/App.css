@@ -54,3 +54,13 @@
   cursor: pointer;
 }
 
+.sort-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sort-button {
+  padding: 8px 12px;
+  cursor: pointer;
+}

@@ -52,8 +52,6 @@ function App() {
         <h2>Filmer</h2>
         <div className="sort-buttons">
           <OrderByAlphaButton onSort={sortMoviesByTitle} />
-        </div>
-        <div className="sort-buttons">
           <OrderByGradeButton onSort={sortMoviesByGrade} />
         </div>
         {movies.length === 0 ? (
