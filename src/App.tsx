@@ -57,7 +57,7 @@ function App() {
         {movies.length === 0 ? (
           <p>Finnd inga filmer</p>
         ) : (
-          <ul>
+          <li>
             {movies.map((movie) => (
               <Movie
                 key={movie.id}
@@ -66,7 +66,7 @@ function App() {
                 onRemove={() => removeMovie(movie.id)}
               />
             ))}
-          </ul>
+          </li>
         )}
       </section>
     </>
