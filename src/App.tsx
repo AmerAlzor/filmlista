@@ -8,7 +8,10 @@ type Movie = {
 };
 
 function App() {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([
+    { id: 1, name: "Amer", grade: 5},
+    { id: 2, name: "American Hository X", grade: 4},
+  ]);
 
   return (
     <>
