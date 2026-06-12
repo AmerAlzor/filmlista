@@ -3,6 +3,7 @@ import "./App.css";
 import Movie from "./components/Movie";
 import AddMovieForm from "./components/AddMovieForm";
 import OrderByAlphaButton from "./components/OrderByAlphaButton";
+import OrderByGradeButton from "./components/OrderByGradeButton";
 
 type Movie = {
   id: number;
@@ -27,15 +28,19 @@ function App() {
 
     setMovies([...movies, newMovie]);
   };
-    const sortMoviesByTitle = () => {
+  const sortMoviesByTitle = () => {
     const sortedMovies = [...movies].sort((a, b) =>
-      a.name.localeCompare(b.name, "sv")
+      a.name.localeCompare(b.name, "sv"),
     );
 
     setMovies(sortedMovies);
   };
 
+  const sortMoviesByGrade = () => {
+    const sortedMovies = [...movies].sort((a, b) => b.grade - a.grade);
 
+    setMovies(sortedMovies);
+  };
 
   return (
     <>
@@ -45,8 +50,11 @@ function App() {
         <AddMovieForm onAddMovie={addMovie} />
 
         <h2>Filmer</h2>
-         <div className="sort-buttons">
+        <div className="sort-buttons">
           <OrderByAlphaButton onSort={sortMoviesByTitle} />
+        </div>
+        <div className="sort-buttons">
+          <OrderByGradeButton onSort={sortMoviesByGrade} />
         </div>
         {movies.length === 0 ? (
           <p>Finnd inga filmer</p>
