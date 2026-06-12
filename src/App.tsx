@@ -13,6 +13,9 @@ function App() {
     { id: 1, name: "Amer", grade: 5},
     { id: 2, name: "American Hository X", grade: 4},
   ]);
+  const removeMovie = (id: number) => {
+    setMovies(movies.filter((movie)=> movie.id !== id ))
+  }
 
   return (
     <>
@@ -26,7 +29,8 @@ function App() {
             ) : (
             <ul>
              {movies.map((movie) => (
-              <Movie key={movie.id} name={movie.name} grade={movie.grade} /> 
+              <Movie key={movie.id} name={movie.name} grade={movie.grade} onRemove={() => removeMovie(movie.id)} 
+              /> 
         ))}
         </ul>
         )}

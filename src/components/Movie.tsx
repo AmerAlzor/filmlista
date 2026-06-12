@@ -1,9 +1,10 @@
 type Movieprop = {
     name: string;
     grade: number;
+    onRemove: () => void;
 };
 
-function Movie({ name, grade }: Movieprop){
+function Movie({ name, grade, onRemove }: Movieprop){
     let stars =  "";
     
   if (grade === 1) stars = "🌟";
@@ -16,6 +17,9 @@ function Movie({ name, grade }: Movieprop){
     <li className = "movie-item">
      <span className="movie-title">{name}</span>
       <span className="movie-stars">{stars}</span>
+
+      <button className="remove-button" onClick={onRemove}>X</button>
+
     </li>
   );
 }

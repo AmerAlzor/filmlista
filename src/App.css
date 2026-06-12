@@ -18,3 +18,14 @@
 .movie-stars {
   letter-spacing: 2px;
 }
+
+.remove-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-button:hover {
+  transform: scale(1.1);
+}
