@@ -1,16 +1,36 @@
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+
+type Movie = {
+  id: number;
+  name: string;
+  grade: number;
+};
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
   return (
     <>
-      <section id="center">
-        <div className="left">
-          <h1>Get started</h1>
-        </div>
+        <section className="movie-box">
 
+      <h1>filmlista</h1>
+        <h2>Filmer</h2>
+
+        {movies.length === 0 ? (
+          <p>Finnd inga filmer</p> 
+            ) : (
+            <ul>
+              {movies.map((movie) => (
+          <li key={movie.id}> 
+          {movie.name} - {movie.grade}
+          </li>
+        ))}
+        </ul>
+        )}
       </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
