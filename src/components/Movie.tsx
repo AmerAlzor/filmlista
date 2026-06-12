@@ -17,5 +17,5 @@ function Movie({ name, grade }: Movieprop){
     {name} - {stars}
     </li>
   );
-
 }
+export default Movie;

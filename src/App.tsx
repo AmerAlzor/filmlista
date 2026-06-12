@@ -24,10 +24,8 @@ function App() {
           <p>Finnd inga filmer</p> 
             ) : (
             <ul>
-              {movies.map((movie) => (
-          <li key={movie.id}> 
-          {movie.name} - {movie.grade}
-          </li>
+             {movies.map((movie) => (
+              <movie
         ))}
         </ul>
         )}
