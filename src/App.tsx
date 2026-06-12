@@ -8,7 +8,7 @@ type Movie = {
 };
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   return (
     <>
