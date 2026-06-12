@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Movie from "./components/Movie";
 
 type Movie = {
   id: number;
@@ -25,7 +26,7 @@ function App() {
             ) : (
             <ul>
              {movies.map((movie) => (
-              <movie
+              <Movie key={movie.id} name={movie.name} grade={movie.grade} /> 
         ))}
         </ul>
         )}

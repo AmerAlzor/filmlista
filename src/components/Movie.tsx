@@ -14,7 +14,8 @@ function Movie({ name, grade }: Movieprop){
 
   return (
     <li className = "movie-item">
-    {name} - {stars}
+     <span className="movie-title">{name}</span>
+      <span className="movie-stars">{stars}</span>
     </li>
   );
 }
