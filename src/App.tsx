@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <>
+    <main className="app">
       <section className="movie-box">
         <h1>filmlista</h1>
 
@@ -57,7 +57,7 @@ function App() {
         {movies.length === 0 ? (
           <p>Finnd inga filmer</p>
         ) : (
-          <li>
+          <ul className="movie-list">
             {movies.map((movie) => (
               <Movie
                 key={movie.id}
@@ -66,10 +66,11 @@ function App() {
                 onRemove={() => removeMovie(movie.id)}
               />
             ))}
-          </li>
+          </ul>
         )}
       </section>
-    </>
+    
+    </main>
   );
 }
 
