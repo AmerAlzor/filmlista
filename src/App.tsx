@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import Movie from "./components/Movie";
+import AddMovieForm from "./components/AddMovieForm";
+
+
 
 type Movie = {
   id: number;
@@ -16,6 +19,15 @@ function App() {
   const removeMovie = (id: number) => {
     setMovies(movies.filter((movie)=> movie.id !== id ))
   }
+  const addMovie = (title: string, grade: number) => {
+    const newMovie: Movie = {
+      id: Date.now(),
+      name: title,
+      grade: grade,
+    };
+
+    setMovies([...movies, newMovie]);
+  };
 
   return (
     <>
@@ -23,7 +35,8 @@ function App() {
 
       <h1>filmlista</h1>
 
-      
+            <AddMovieForm onAddMovie={addMovie} />
+
         <h2>Filmer</h2>
 
         {movies.length === 0 ? (

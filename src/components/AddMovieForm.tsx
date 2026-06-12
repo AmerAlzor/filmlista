@@ -23,6 +23,7 @@ function AddMovieForm({ onAddMovie }: AddMovieFormProps) {
       return;
     }
 
+    onAddMovie(movieTitle, Number(grade));
 
     setName("");
     setGrade("0");
